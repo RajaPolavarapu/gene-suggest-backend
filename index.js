@@ -9,7 +9,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(cors());
 
-const port = 3001;
+const port = 5000;
 
 connection.connect((err) => {
     if (err) {
