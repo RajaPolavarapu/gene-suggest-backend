@@ -41,6 +41,10 @@ app.get('/gene_suggest', (req, res) => {
     }
 });
 
+app.get("/", (req, res) => {
+    res.send("Hello World")
+})
+
 app.listen(port, () => {
     console.log(`End Point Listening at http://localhost:${port}`)
 })
