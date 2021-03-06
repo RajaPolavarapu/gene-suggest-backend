@@ -1,7 +1,7 @@
-const { expect, assert } = require("chai");
-const request = require("request");
+const { expect } = require("chai");
 const { getService } = require("./testUtils");
-const app = require("../index");
+// const proxyquire = require("proxyquire");
+
 
 let endPoint = "http://localhost:5000";
 
@@ -103,9 +103,8 @@ describe("Gene Suggest Endpoint Test: /gene_suggest", function () {
         done(err);
       })
   });
+
 });
-
-
 
 
 //Uniq Species End Point Test

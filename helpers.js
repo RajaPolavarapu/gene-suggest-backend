@@ -1,11 +1,13 @@
 const mysql = require('mysql');
 
-const connection = mysql.createConnection({
+const connectionObject = {
     host: 'ensembldb.ensembl.org',
     port: '3306',
     user: 'anonymous',
     database: 'ensembl_website_102'
-});
+};
+
+const connection = mysql.createConnection(connectionObject);
 
 const prepareQuery = ({ query, species, ...rest }) => {
     const andParts = [];
