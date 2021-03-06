@@ -1,12 +1,7 @@
-const { expect, assert } = require("chai");
-const request = require("request");
+const { expect } = require("chai");
 const sinon = require('sinon');
 const proxyquire = require("proxyquire");
-const { getService } = require("./testUtils");
-const app = require("../index");
 const { connection } = require("../helpers");
-
-let endPoint = "http://localhost:5000";
 
 describe('Error Cases Test', function () {
     beforeEach(function() {
