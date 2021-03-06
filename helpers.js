@@ -12,7 +12,7 @@ const prepareQuery = ({ query, species, ...rest }) => {
 
     const limit = isNaN(rest.limit) ? 10 : rest.limit || 10;
 
-    let sqlQuery = "select display_label from gene_autocomplete";
+    let sqlQuery = "select DISTINCT display_label from gene_autocomplete";
     if (query) {
         andParts.push(`display_label REGEXP '${query}'`);
     }
